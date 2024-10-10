@@ -2,6 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import { StyleSheet, Text, View, Image, Pressable, Alert, SafeAreaView, TextInput, ImageBackground } from 'react-native';
 import { Link } from 'expo-router';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
+import { UserIconLogin, LockIcon } from "./icons"
 
 
 export default function Login() {
@@ -27,18 +28,24 @@ export default function Login() {
 
             <View>
               <Text className="text-gray-400 uppercase font-bold mb-2">Usuario</Text>
-              <TextInput placeholder="Usuario" className="bg-white rounded-lg p-2 w-80 mb-4" />
+              <View className="relative">
+                <TextInput placeholder="Usuario" className="bg-white rounded-lg p-2 w-80 mb-4 pl-12" />
+                <UserIconLogin className="absolute top-1.5 left-2" color="gray" />
+              </View>
             </View>
 
 
             <View>
               <Text className="text-gray-400 uppercase font-bold mb-2">Password</Text>
-              <TextInput secureTextEntry placeholder="Usuario" className="bg-white rounded-lg p-2 w-80 mb-4" />
+              <View className="relative">
+                <TextInput secureTextEntry placeholder="Usuario" className="bg-white rounded-lg p-2 w-80 mb-4 pl-12"/>
+                <LockIcon className="absolute top-1.5 left-2" color="gray" />
+              </View>
             </View>
 
 
             <Link href="/init" asChild>
-              <Pressable className="flex items-center justify-center mt-7">
+              <Pressable className="flex items-center justify-center mt-7 transition-all active:scale-105">
                 <ImageBackground source={require('../../assets/fondo2.jpg')} className="w-52 h-12 flex items-center justify-center" style={{ borderRadius: 8, overflow: 'hidden' }}>
                   <Text className="text-white uppercase font-bold text-center">INGRESAR</Text>
                 </ImageBackground>
@@ -47,7 +54,7 @@ export default function Login() {
 
 
             <Pressable className="mt-4">
-              <Text className="text-green-700 uppercase font-bold mb-4 text-center">Olvidaste tu contraseña?</Text>
+              <Text className="text-green-700 uppercase font-bold mb-4 text-center text-xs">¿Olvidaste tu contraseña?</Text>
             </Pressable>
           </View>
 

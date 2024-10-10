@@ -14,7 +14,7 @@ export default function TabsLayout() {
                 screenOptions={({ route }) => ({
                     tabBarActiveTintColor: "green",
                     tabBarInactiveTintColor: "gray",
-                    tabBarStyle: { height: 65, paddingTop: 5 },
+                    tabBarStyle: { height: 80, paddingTop: 5 },
                     // tabBarLabelStyle: {
                     //     fontSize: 11,
                     //     fontWeight: "bold",
@@ -27,19 +27,19 @@ export default function TabsLayout() {
                         switch (route.name) {
                             case 'init':
                                 return <Animatable.Text animation="zoomIn" duration={250}>
-                                    <Text className="uppercase font-extrabold" style={{ fontSize: 11, color: "green" }}>Inicio</Text>
+                                    <Text className="font-extrabold" style={{ fontSize: 13, color: "green" }}>Inicio</Text>
                                 </Animatable.Text>
                             case 'products':
                                 return <Animatable.Text animation="zoomIn" duration={250}>
-                                    <Text className="uppercase font-bold" style={{ fontSize: 11, color: "green" }}>Productos</Text>
+                                    <Text className="font-bold" style={{ fontSize: 13, color: "green" }}>Productos</Text>
                                 </Animatable.Text>
                             case 'ventas':
                                 return <Animatable.Text animation="zoomIn" duration={250}>
-                                    <Text className="uppercase font-bold" style={{ fontSize: 11, color: "green" }}>Ventas</Text>
+                                    <Text className="font-bold" style={{ fontSize: 13, color: "green" }}>Ventas</Text>
                                 </Animatable.Text>
                             case 'statistics':
                                 return <Animatable.Text animation="zoomIn" duration={250}>
-                                    <Text className="uppercase font-bold" style={{ fontSize: 11, color: "green" }}>Estadisticas</Text>
+                                    <Text className="font-bold" style={{ fontSize: 13, color: "green" }}>Estadisticas</Text>
                                 </Animatable.Text>
                             default:
                                 return null;
