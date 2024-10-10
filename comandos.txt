@@ -1,0 +1,16 @@
+Instalar Expo: npm install -g expo-cli (si no lo tienes instalado)
+Instalar dependencias: npm install (en la raíz del proyecto)
+Instalar dependencias de desarrollo: npm install --save-dev (en la raíz del proyecto)
+
+
+Deberan instalar estas dependencias:
+
+@expo/vector-icons
+expo-constants
+expo-linking
+expo-router
+nativewind
+react-native-animatable
+react-native-keyboard-aware-scroll-view
+react-native-safe-area-context
+react-native-screens

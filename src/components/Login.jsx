@@ -29,8 +29,8 @@ export default function Login() {
             <View>
               <Text className="text-gray-400 uppercase font-bold mb-2">Usuario</Text>
               <View className="relative">
-                <TextInput placeholder="Usuario" className="bg-white rounded-lg p-2 w-80 mb-4 pl-12" />
-                <UserIconLogin className="absolute top-1.5 left-2" color="gray" />
+                <TextInput placeholder="Usuario" className="bg-white rounded-lg p-2.5 w-80 mb-4 pl-12" />
+                <UserIconLogin className="absolute top-2 left-2" color="gray" />
               </View>
             </View>
 
@@ -38,8 +38,8 @@ export default function Login() {
             <View>
               <Text className="text-gray-400 uppercase font-bold mb-2">Password</Text>
               <View className="relative">
-                <TextInput secureTextEntry placeholder="Usuario" className="bg-white rounded-lg p-2 w-80 mb-4 pl-12"/>
-                <LockIcon className="absolute top-1.5 left-2" color="gray" />
+                <TextInput secureTextEntry placeholder="Usuario" className="bg-white rounded-lg p-2.5 w-80 mb-4 pl-12"/>
+                <LockIcon className="absolute top-2 left-2" color="gray" />
               </View>
             </View>
 
@@ -66,12 +66,3 @@ export default function Login() {
     </SafeAreaView>
   )
 }
-function handlePress() {
-  Alert.alert('Deberia iniciar sesion, pero aja');
-}
-
-// const styles = StyleSheet.create({
-//   btn: {
-//     backgroundImage: './assets/fondo2.jpg',
-//   },
-// });
