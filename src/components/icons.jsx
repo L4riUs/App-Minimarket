@@ -1,6 +1,7 @@
 import AntDesign from '@expo/vector-icons/AntDesign';
 import Foundation from '@expo/vector-icons/Foundation';
 import FontAwesome6 from '@expo/vector-icons/FontAwesome6';
+import FontAwesome5 from '@expo/vector-icons/FontAwesome5';
 import Entypo from '@expo/vector-icons/Entypo';
 import FontAwesome from '@expo/vector-icons/FontAwesome';
 import Feather from '@expo/vector-icons/Feather';
@@ -25,4 +26,16 @@ export const UserIconLogin = (props) => {
 }
 export const LockIcon = (props) => {
     return <Feather name="lock" size={28} color="black" {...props}/>
+}
+export const TruckIcon = (props) => {
+    return <Entypo name="bookmarks" size={28} color="black" {...props}/>
+}
+export const ArrowRightIcon = (props) => {
+    return <AntDesign name="arrowright" size={28} color="black" {...props}/>
+}
+export const InstaIcon = (props) => {
+    return <AntDesign name="instagram" size={28} color="black" {...props}/>
+}
+export const BookMarkIcon = (props) => {
+    return <FontAwesome6 name="bookmark" size={24} color="black" {...props}/>
 }

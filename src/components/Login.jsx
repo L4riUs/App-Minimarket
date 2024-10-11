@@ -4,7 +4,6 @@ import { Link } from 'expo-router';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { UserIconLogin, LockIcon } from "./icons"
 
-
 export default function Login() {
   return (
     <SafeAreaView className="flex-1 items-center bg-gray-200">

@@ -1,5 +1,5 @@
 import { Tabs } from "expo-router";
-import { HomeIcon, BoxIcon, InvoiceIcon, StatisticIcon } from "../../src/components/icons";
+import { HomeIcon, BoxIcon, InvoiceIcon, StatisticIcon, TruckIcon } from "../../src/components/icons";
 import Header from "../../src/components/header";
 import { SafeAreaProvider } from "react-native-safe-area-context";
 import { Text } from 'react-native';
@@ -37,9 +37,13 @@ export default function TabsLayout() {
                                 return <Animatable.Text animation="zoomIn" duration={250}>
                                     <Text className="font-bold" style={{ fontSize: 13, color: "green" }}>Ventas</Text>
                                 </Animatable.Text>
+                            case 'prov':
+                                return <Animatable.Text animation="zoomIn" duration={250}>
+                                    <Text className="font-bold" style={{ fontSize: 12, color: "green" }}>Proveedores</Text>
+                                </Animatable.Text>    
                             case 'statistics':
                                 return <Animatable.Text animation="zoomIn" duration={250}>
-                                    <Text className="font-bold" style={{ fontSize: 13, color: "green" }}>Estadisticas</Text>
+                                    <Text className="font-bold" style={{ fontSize: 12, color: "green" }}>Estadisticas</Text>
                                 </Animatable.Text>
                             default:
                                 return null;
@@ -55,6 +59,9 @@ export default function TabsLayout() {
                 }} />
                 <Tabs.Screen name="ventas" options={{
                     tabBarIcon: ({ color }) => <InvoiceIcon color={color} />,
+                }} />
+                <Tabs.Screen name="prov" options={{
+                    tabBarIcon: ({ color }) => <TruckIcon color={color} />,
                 }} />
                 <Tabs.Screen name="statistics" options={{
                     tabBarIcon: ({ color }) => <StatisticIcon color={color} />,
