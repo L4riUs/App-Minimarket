@@ -1,12 +1,13 @@
 import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View, Image, Pressable, Alert, SafeAreaView, TextInput, ImageBackground } from 'react-native';
+import { StyleSheet, Text, View, Image, Pressable, Alert, SafeAreaView, TextInput, ImageBackground, ScrollView } from 'react-native';
 import { Link } from 'expo-router';
 import { KeyboardAwareScrollView } from 'react-native-keyboard-aware-scroll-view';
 import { UserIconLogin, LockIcon } from "./icons"
 
 export default function Login() {
   return (
-    <SafeAreaView className="flex-1 items-center bg-gray-200">
+
+    <ScrollView>
       <KeyboardAwareScrollView
         contentContainerStyle={{ flexGrow: 1 }}
         resetScrollToCoords={{ x: 0, y: 0 }}
@@ -17,7 +18,7 @@ export default function Login() {
           <View>
             <Image source={require('../../assets/banner_app.png')} className="w-96 h-60" />
             <Image source={require('../../assets/logo_m.png')} style={{ borderColor: '#fff', borderWidth: 3, borderRadius: 100 }} className="w-44 h-44 absolute left-1/4 top-28" />
-            <StatusBar style="auto" />
+            <StatusBar style="inverted" />
           </View>
           <View className="">
             <Text className="text-green-700 uppercase font-extrabold mt-20 text-3xl text-center">iniciar sesión</Text>
@@ -37,7 +38,7 @@ export default function Login() {
             <View>
               <Text className="text-gray-400 uppercase font-bold mb-2">Password</Text>
               <View className="relative">
-                <TextInput secureTextEntry placeholder="Usuario" className="bg-white rounded-lg p-2.5 w-80 mb-4 pl-12"/>
+                <TextInput secureTextEntry placeholder="Usuario" className="bg-white rounded-lg p-2.5 w-80 mb-4 pl-12" />
                 <LockIcon className="absolute top-2 left-2" color="gray" />
               </View>
             </View>
@@ -57,11 +58,9 @@ export default function Login() {
             </Pressable>
           </View>
 
-          <View>
-            <Image source={require('../../assets/bannerB_app.png')} className="w-96 h-60 absolute -bottom-24 -left-0" resizeMode='contain' />
-          </View>
         </View>
       </KeyboardAwareScrollView>
-    </SafeAreaView>
+    </ScrollView>
+
   )
 }

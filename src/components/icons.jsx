@@ -19,7 +19,7 @@ export const StatisticIcon = (props) => {
     return <Entypo name="bar-graph" size={30} color="black" {...props} />
 }
 export const UserIcon = (props) => {
-    return <FontAwesome name="user-circle-o" size={35} color="black" {...props}/>
+    return <FontAwesome name="user-circle-o" size={30} color="black" {...props}/>
 }
 export const UserIconLogin = (props) => {
     return <Feather name="user" size={28} color="black" {...props}/>
@@ -36,6 +36,9 @@ export const ArrowRightIcon = (props) => {
 export const InstaIcon = (props) => {
     return <AntDesign name="instagram" size={28} color="black" {...props}/>
 }
-export const BookMarkIcon = (props) => {
-    return <FontAwesome6 name="bookmark" size={24} color="black" {...props}/>
+export const TagIcon = (props) => {
+    return <AntDesign name="tag" size={28} color="black" {...props}/>
+}
+export const BellIcon = (props) => {
+    return <Feather name="bell" size={28} color="black" {...props}/>
 }
